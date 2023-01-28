@@ -7,5 +7,5 @@ btn.addEventListener("click", () => {
   setTimeout(() => {
     btn.classList.toggle("show-loader");
     btn.removeAttribute("disabled");
-  }, 3000);
+  }, 10000);
 });
