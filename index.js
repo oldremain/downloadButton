@@ -1,11 +1,13 @@
 const btn = document.querySelector(".btn");
 
+let timerId = undefined;
 btn.addEventListener("click", () => {
   btn.classList.toggle("show-loader");
   btn.setAttribute("disabled", true);
 
-  setTimeout(() => {
+  if (timerId) clearTimeout(timerId);
+  timerId = setTimeout(() => {
     btn.classList.toggle("show-loader");
     btn.removeAttribute("disabled");
-  }, 10000);
+  }, 3000);
 });
